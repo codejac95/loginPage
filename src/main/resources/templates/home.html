@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
 </head>
 <body>
-    <div>
-        <h1>Product List</h1>
+    <h1>Product List</h1>
+    <div> 
         <ul>
             <li th:each="product : ${products}">
                 <h2>
@@ -18,5 +19,22 @@
             </li>
         </ul>
     </div>
+
+    <div id = Box>
+        <a href="/login">Login</a><br>
+    </div>
+    <div id = Box>
+        <a href="/logout">Logout</a>  
+    </div>
+
+    <div id = Box>
+      <button class ="regBtn">Register</button>
+    </div>
+    <style>
+        body{
+            background-color: bisque;   
+        }
+    </style>
+    
 </body>
 </html>
