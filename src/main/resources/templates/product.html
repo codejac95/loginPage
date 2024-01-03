@@ -8,7 +8,13 @@
 <body>
     <div>
         <h1>Product Detail</h1>
-        <h2 th:text="${product.name}"></h2>
+        <h2>Name: <span th:text="${product.name}"></span></h2>
+        <h2>Description: <span th:text="${product.description}"></span></h2>
+        <h2>Price: <span th:text="${product.price}"></span></h2>
+        <h2 th:text="${product.image}"></h2>
+    </div>
+    <div>
+        <a href="/">Tillbaka</a>
     </div>
 </body>
-</html>
+</html> 
