@@ -7,6 +7,16 @@
 </head>
 <body>
     <h1>register</h1>
+
+    <form method="post" th:action ="@{/register}">
+        <input type="text" name = "username" placeholder ="Username"><br>
+        <input type="text" name = "password" placeholder="Password"><br>
+        <input type="text" name = "firstName" placeholder="Firstname"><br>
+        <input type="text" name = "lastName" placeholder="Lastname"><br>
+        <input type="text" name = "mail" placeholder="Mail">
+        <button type ="submit">Save</button>
+    </form>
+
     <a href="/">Tillbaka</a>
 </body>
 </html>
