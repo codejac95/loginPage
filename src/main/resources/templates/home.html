@@ -35,6 +35,12 @@
             background-color: bisque;   
         }
     </style>
+    <div sec:authorize="isAuthenticated()" id = Box> 
+        <span> 
+            <button><a th:href="@{/orders}"> Mina ordrar</a></button>
+        </span>
+    </div>
+
     
 </body>
 </html>
