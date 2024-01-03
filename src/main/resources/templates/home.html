@@ -37,7 +37,7 @@
     </style>
     <div sec:authorize="isAuthenticated()" id = Box> 
         <span> 
-            <button> Mina ordrar</button>
+            <button><a th:href="@{/orders}"> Mina ordrar</a></button>
         </span>
     </div>
 
