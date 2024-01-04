@@ -20,15 +20,23 @@
         </ul>
     </div>
 
-    <div id = Box>
-        <a href="/login">Login</a><br>
+    <div id = Box <div sec:authorize="!isAuthenticated()">
+        <span>
+
+            <a href="/login">Login</a><br>
+
+        </span>
     </div>
-    <div id = Box>
-        <a href="/logout">Logout</a>  
+    <div id = Box sec:authorize="isAuthenticated()">
+        <span>
+            <a href="/logout">Logout</a>  
+        </span>
     </div>
 
-    <div id = Box>
-      <a href="/register">Registrera</a>
+    <div id = Box sec:authorize="!isAuthenticated()">
+        <span>
+            <a href="/register">Registrera</a>
+        </span>
     </div>
     <style>
         body{
