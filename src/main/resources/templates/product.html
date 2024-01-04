@@ -14,7 +14,16 @@
         <img th:src="${product.image}" alt="Product Image">
     </div>
     <div>
-        <a href="/">Tillbaka</a>
+        <button>
+            <a href="/">Tillbaka</a>
+            
+        </button>
     </div>
+        <div sec:authorize="isAuthenticated()">
+            <button>
+                <a>Lägg till i kundvagn</a>
+            </button>
+
+        </div>
 </body>
 </html> 
