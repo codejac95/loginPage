@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
+
 <body>
     <h1>Product List</h1>
-    <div> 
+    <div>
         <ul>
             <li th:each="product : ${products}">
                 <h2>
@@ -20,35 +22,36 @@
         </ul>
     </div>
 
-    <div id = Box <div sec:authorize="!isAuthenticated()">
+    <div id=B ox sec:authorize="!isAuthenticated()">
         <span>
 
             <a href="/login">Login</a><br>
 
         </span>
     </div>
-    <div id = Box sec:authorize="isAuthenticated()">
+    <div id=B ox sec:authorize="isAuthenticated()">
         <span>
             <a href="/logout">Logout</a>  
         </span>
     </div>
 
-    <div id = Box sec:authorize="!isAuthenticated()">
+    <div id=B ox sec:authorize="!isAuthenticated()">
         <span>
             <a href="/register">Registrera</a>
         </span>
     </div>
     <style>
-        body{
-            background-color: bisque;   
+        body {
+            background-color: bisque;
         }
     </style>
-    <div sec:authorize="isAuthenticated()" id = Box> 
+    <div sec:authorize="isAuthenticated()" id=B ox>
         <span> 
             <button><a th:href="@{/orders}"> Mina ordrar</a></button>
         </span>
     </div>
 
-    
+
 </body>
+
 </html>
