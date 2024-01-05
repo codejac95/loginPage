@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
 <body>
@@ -38,17 +37,29 @@
             <a href="/register">Registrera</a>
         </span>
     </div>
-    <style>
-        body{
-            background-color: bisque;   
-        }
-    </style>
-    <div sec:authorize="isAuthenticated()" id = Box> 
+   
+    <div id = Box sec:authorize="isAuthenticated()"> 
         <span> 
-            <button><a th:href="@{/orders}"> Mina ordrar</a></button>
+            <button> <a href="/orders"> Mina ordrar</a> </button>
         </span>
     </div>
 
+ <style>
+    body {
+        background-color: bisque;           
+    } 
+#Box {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    </style>
     
 </body>
 </html>

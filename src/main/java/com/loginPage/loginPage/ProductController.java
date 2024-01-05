@@ -30,8 +30,6 @@ public class ProductController {
     public String myOrders() {
         return "orders"; 
     }
-
-   
 }
 
 
