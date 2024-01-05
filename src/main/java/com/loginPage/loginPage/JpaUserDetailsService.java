@@ -10,7 +10,6 @@ public class JpaUserDetailsService implements UserDetailsService{
 
     private final UserRepository userRepository;
     
-
     public JpaUserDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }

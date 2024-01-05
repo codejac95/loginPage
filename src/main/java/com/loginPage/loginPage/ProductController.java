@@ -17,6 +17,7 @@ public class ProductController {
         model.addAttribute("products", productRepository.findAll());
         return "home";
     }
+
     @GetMapping("/product/{productId}")
     public String getProductDetail(@PathVariable int productId, Model model) {
         Product product = productRepository.findById(productId).orElse(null);
@@ -33,5 +34,3 @@ public class ProductController {
         return "orders"; 
     }
 }
-
-
