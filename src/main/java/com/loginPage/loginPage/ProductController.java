@@ -19,11 +19,13 @@ public class ProductController {
     }
     @GetMapping("/product/{productId}")
     public String getProductDetail(@PathVariable int productId, Model model) {
-        Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid product ID: " + productId));
-
-        model.addAttribute("product", product);
+        Product product = productRepository.findById(productId).orElse(null);
+        if (product!=null){
+            model.addAttribute("product", product);
         return "product";
+        } else {
+            return "redirect:/";
+        } 
     }
 
     @GetMapping("/orders")
