@@ -13,17 +13,13 @@
         <h2>Price: <span th:text="${product.price}"></span></h2>
         <img th:src="${product.image}" alt="Product Image">
     </div>
-    <div>
-        <button>
-            <a href="/">Tillbaka</a>
-            
-        </button>
-    </div>
-    
         <div sec:authorize="isAuthenticated()">
             <button>
-                <a>Lägg till i kundvagn</a>
+                <a>Add to cart</a>
             </button>
+        </div>
+        <div>
+            <br><button><a href="/">Home</a></button>
         </div>
     <style>
         body {

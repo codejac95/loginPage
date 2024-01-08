@@ -28,25 +28,26 @@
     </div>
     <div id = Box sec:authorize="isAuthenticated()">
         <span>
-            <a href="/logout">Logout</a>  
+           <a href="/logout">Logout</a>  
         </span>
     </div>
 
     <div id = Box sec:authorize="!isAuthenticated()">
         <span>
-            <a href="/register">Registrera</a>
+            <a href="/register">Register</a>
         </span>
     </div>
    
     <div id = Box sec:authorize="isAuthenticated()"> 
         <span> 
-            <button> <a href="/orders"> Mina ordrar</a> </button>
+            <a href="/orders">My Orders</a>
         </span>
     </div>
 
  <style>
     body {
-        background-color: bisque;           
+        background-color: bisque; 
+           
     } 
     #Box {
         display: inline-block;
