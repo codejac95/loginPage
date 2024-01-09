@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
-</head>
-<body>
-    <h1>Register</h1>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-register">
+      <h1>Register</h1>
 
-    <form method="post" th:action ="@{/register}">
-        <input type="text" name = "username" placeholder ="Username"><br>
-        <input type="password" name = "password" placeholder="Password"><br>
-        <input type="text" name = "firstName" placeholder="Firstname"><br>
-        <input type="text" name = "lastName" placeholder="Lastname"><br>
-        <input type="text" name = "mail" placeholder="Mail">
-    </form>
-    <br><button type ="submit">Save</button>
-    <br><br><a href="/">Home</a>
-    <style>
-        body {
-            background-color: bisque;           
-        } 
-        #Box {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-      </style>  
-</body>
+      <form method="post" th:action="@{/register}">
+        <input type="text" name="username" placeholder="Username" /><br />
+        <input type="password" name="password" placeholder="Password" /><br />
+        <input type="text" name="firstName" placeholder="Firstname" /><br />
+        <input type="text" name="lastName" placeholder="Lastname" /><br />
+        <input type="text" name="mail" placeholder="Mail" />
+        <br /><button class="hover-button" type="submit">Save</button><br />
+        <button class="hover-button"><a href="/">Home</a></button>
+      </form>
+    </div>
+  </body>
 </html>

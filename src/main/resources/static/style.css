@@ -1,0 +1,53 @@
+body {
+  background-color: powderblue;
+  font-family: Helvetica;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  background-color: beige;
+  width: 600px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+  padding: 20px;
+}
+.container-register {
+  background-color: beige;
+  border-radius: 40px;
+  padding: 20px;
+  width: 180px;
+  margin: auto;
+}
+.image {
+  width: 200px;
+  height: 200px;
+}
+.hover-button {
+  width: 100px;
+  height: auto;
+  border: none;
+  background-color: beige;
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  outline: none;
+  border: 1px solid black;
+  position: relative;
+  z-index: 1;
+}
+.hover-button:hover {
+  background-color: #27ae60;
+}
+.hover-button::before {
+  transition: 0.5 all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #27ae60;
+}
