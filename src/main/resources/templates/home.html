@@ -28,14 +28,7 @@
           </button>
         </span>
       </div>
-      <div sec:authorize="isAuthenticated()">
-        <span>
-          <button class="hover-button">
-            <a href="/logout"><h3>Logout</h3></a>
-          </button>
-        </span>
-      </div>
-
+    
       <div sec:authorize="!isAuthenticated()">
         <span>
           <button class="hover-button">
@@ -51,6 +44,15 @@
           </button>
         </span>
       </div>
+
+      <div sec:authorize="isAuthenticated()">
+        <span>
+          <button class="hover-button">
+            <a href="/logout"><h3>Logout</h3></a>
+          </button>
+        </span>
+      </div>
+      
     </div>
   </body>
 </html>

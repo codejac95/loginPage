@@ -14,12 +14,14 @@
       <h2>Price: <span th:text="${product.price}"></span></h2>
       <img class="image" th:src="${product.image}" alt="Product Image" />
       <div sec:authorize="isAuthenticated()">
-      <button class="hover-button">
-        <a>Add to cart</a>
-      </button>
-      <div>
-        <br /><button class="hover-button"><a href="/">Home</a></button>
+        <button class="hover-button">
+          <a>Add to cart</a>
+        </button>
       </div>
+      <br /><button class="hover-button"><a href="/">Home</a></button>
     </div>
+      
+    
+
   </body>
 </html>
