@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-</head>
-<body>
-    <h1>Product List</h1>
-    <div> 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Product List</h1>
+      <div>
         <ul>
-            <li th:each="product : ${products}">
-                <h2>
-                    <a th:href="@{'/product/' + ${product.id}}">
-                        <span th:text="${product.name}"></span>
-                    </a>
-                </h2>
-            </li>
+          <li th:each="product : ${products}">
+            <h2>
+              <a th:href="@{'/product/' + ${product.id}}">
+                <span th:text="${product.name}"></span>
+              </a>
+            </h2>
+          </li>
         </ul>
-    </div>
+      </div>
 
-    <div id = Box sec:authorize="!isAuthenticated()">
+      <div sec:authorize="!isAuthenticated()">
         <span>
-
-            <a href="/login">Login</a><br>
-
+          <button class="hover-button">
+            <a href="/login"><h3>Login</h3></a>
+          </button>
         </span>
-    </div>
-    <div id = Box sec:authorize="isAuthenticated()">
+      </div>
+      <div sec:authorize="isAuthenticated()">
         <span>
-           <a href="/logout">Logout</a>  
+          <button class="hover-button">
+            <a href="/logout"><h3>Logout</h3></a>
+          </button>
         </span>
-    </div>
+      </div>
 
-    <div id = Box sec:authorize="!isAuthenticated()">
+      <div sec:authorize="!isAuthenticated()">
         <span>
-            <a href="/register">Register</a>
+          <button class="hover-button">
+            <a href="/register"><h3>Register</h3></a>
+          </button>
         </span>
-    </div>
-   
-    <div id = Box sec:authorize="isAuthenticated()"> 
-        <span> 
-            <a href="/orders">My Orders</a>
-        </span>
-    </div>
+      </div>
 
- <style>
-    body {
-        background-color: bisque; 
-           
-    } 
-    #Box {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-</style>
-    
-</body>
+      <div sec:authorize="isAuthenticated()">
+        <span>
+          <button class="hover-button">
+            <a href="/orders"><h3>My Orders</h3></a>
+          </button>
+        </span>
+      </div>
+    </div>
+  </body>
 </html>
