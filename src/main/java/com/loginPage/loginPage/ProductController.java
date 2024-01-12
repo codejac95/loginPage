@@ -34,10 +34,6 @@ public class ProductController {
 
     @GetMapping("/orders")
     public String myOrders() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
-            return "redirect:/";
-        }
         return "orders";
     }
 }
